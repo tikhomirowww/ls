@@ -15,19 +15,30 @@
     <nav class="navbar bg-body-tertiary bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand">Local Storage</a>
-        <button
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
-          type="button"
-          class="btn btn-secondary"
-        >
-          Add product
-        </button>
+        <div class="d-flex gap-2 align-items-center">
+          <input
+            id="search-inp"
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            type="button"
+            style="width: 250px"
+            class="btn btn-secondary"
+            id="add"
+          >
+            Add product
+          </button>
+        </div>
       </div>
     </nav>
 
     <!-- Container -->
-    <div class="container d-flex gap-5 flex-wrap"></div>
+    <div class="container d-flex gap-5 flex-wrap mt-5"></div>
 
     <!-- Modal -->
     <div
@@ -61,8 +72,8 @@
             <div class="input-group mt-2">
               <span class="input-group-text">Price</span>
               <input
+                type="number"
                 id="price"
-                type="text"
                 aria-label="First name"
                 class="form-control"
               />
@@ -86,7 +97,9 @@
             >
               Close
             </button>
-            <button type="button" class="btn btn-success">Save changes</button>
+            <button id="edit" type="button" class="btn btn-success">
+              Save changes
+            </button>
             <button id="save" type="button" class="btn btn-primary">
               Add new product
             </button>
